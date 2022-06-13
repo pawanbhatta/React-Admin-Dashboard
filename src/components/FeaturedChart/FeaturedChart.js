@@ -10,7 +10,7 @@ const FeaturedChart = () => {
     <div className="featured">
       <div className="top">
         <h1 className="title">Total Revenue</h1>
-        <MoreVertIcon fontSize="small" />
+        <MoreVertIcon fontSize="small" className="icon" />
       </div>
       <div className="bottom">
         <div className="featuredChart">
