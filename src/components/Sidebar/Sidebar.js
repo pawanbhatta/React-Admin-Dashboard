@@ -112,7 +112,10 @@ const Sidebar = () => {
           className="colorOption"
           onClick={() => dispatch({ type: "DARK" })}
         ></div>
-        {/* <div className="colorOption"></div> */}
+        <div
+          className="colorOption"
+          // onClick={() => dispatch({ type: "BLUE" })}
+        ></div>
       </div>
     </div>
   );
