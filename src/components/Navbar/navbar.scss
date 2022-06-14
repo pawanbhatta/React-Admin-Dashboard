@@ -35,11 +35,13 @@
                 position: relative;
                 .icon {
                     font-size: 20px;
+                    cursor: pointer;
                 }
                 .avatar {
                     height: 30px;
                     width: 30px;
                     border-radius: 50%;
+                    cursor: pointer;
                 }
                 .counter {
                     width: 15px;
