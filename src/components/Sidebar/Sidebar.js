@@ -11,12 +11,29 @@ import SettingsApplicationsOutlinedIcon from "@mui/icons-material/SettingsApplic
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import EventOutlinedIcon from "@mui/icons-material/EventOutlined";
+import { Link } from "react-router-dom";
+// import {
+//   DashboardIcon,
+//   PersonOutlineOutlinedIcon,
+//   Inventory2OutlinedIcon,
+//   AirportShuttleIcon,
+//   QueryStatsIcon,
+//   NotificationsNoneOutlinedIcon,
+//   SettingsSystemDaydreamOutlinedIcon,
+//   PsychologyOutlinedIcon,
+//   SettingsApplicationsOutlinedIcon,
+//   AccountCircleOutlinedIcon,
+//   ExitToAppOutlinedIcon,
+//   EventOutlinedIcon,
+// } from "@mui/icons-material";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Admin</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">Admin</span>
+        </Link>
       </div>
 
       <hr />
@@ -29,14 +46,18 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
-          <li>
-            <PersonOutlineOutlinedIcon className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <EventOutlinedIcon className="icon" />
-            <span>Products</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PersonOutlineOutlinedIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <EventOutlinedIcon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
             <Inventory2OutlinedIcon className="icon" />
             <span>Orders</span>
