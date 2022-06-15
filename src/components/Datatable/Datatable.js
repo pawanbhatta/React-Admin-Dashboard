@@ -57,6 +57,7 @@ const Datatable = () => {
       console.log(error);
     }
   };
+
   const actionColumn = [
     {
       field: "action",
@@ -77,6 +78,7 @@ const Datatable = () => {
       ),
     },
   ];
+
   return (
     <div className="datatable">
       <div className="datatableTitle">

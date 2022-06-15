@@ -14,6 +14,7 @@ import EventOutlinedIcon from "@mui/icons-material/EventOutlined";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
+import { AuthContext } from "../../context/authContext";
 // import {
 //   DashboardIcon,
 //   PersonOutlineOutlinedIcon,
@@ -31,6 +32,7 @@ import { DarkModeContext } from "../../context/darkModeContext";
 
 const Sidebar = () => {
   const { darkMode, dispatch } = useContext(DarkModeContext);
+  const { dispatch: authDispatch } = useContext(AuthContext);
 
   return (
     <div className="sidebar">
@@ -99,7 +101,7 @@ const Sidebar = () => {
           </li>
           <li>
             <ExitToAppOutlinedIcon className="icon" />
-            <span>Logout</span>
+            <span onClick={() => authDispatch({ type: "LOGOUT" })}>Logout</span>
           </li>
         </ul>
       </div>
