@@ -12,11 +12,14 @@ import { auth, db, storage } from "../../firebase";
 import { useEffect, useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { useNavigate } from "react-router-dom";
 
 const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
   const [data, setData] = useState({});
   const [per, setPer] = useState(null);
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const id = e.target.id;
@@ -42,11 +45,7 @@ const New = ({ inputs, title }) => {
         ...data,
         timeStamp: serverTimestamp(),
       });
-
-      console.log(res);
-
-      setData({});
-      setFile("");
+      navigate(-1);
     } catch (error) {
       console.log(error);
     }
