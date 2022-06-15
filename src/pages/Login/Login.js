@@ -24,7 +24,6 @@ const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
