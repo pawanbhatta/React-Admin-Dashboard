@@ -11,15 +11,15 @@ export const userColumns = [
       </div>
     ),
   },
-  { field: "email", headerName: "EMAIL", width: 230 },
-  { field: "age", headerName: "AGE", width: 100 },
+  { field: "email", headerName: "Email", width: 230 },
+  { field: "address", headerName: "Address", width: 230 },
   {
-    field: "status",
-    headerName: "STATUS",
+    field: "country",
+    headerName: "Country",
     width: 160,
     renderCell: (params) => (
       <div className={`cellWithStatus ${params.row.status}`}>
-        {params.row.status}{" "}
+        {params.row.country}{" "}
       </div>
     ),
   },
